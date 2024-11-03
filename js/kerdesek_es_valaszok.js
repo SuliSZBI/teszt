@@ -66,7 +66,7 @@ let tesztSor = [
         kep: 'https://media.licdn.com/dms/image/D4D12AQGMSvEmt00Wxw/article-cover_image-shrink_600_2000/0/1710472277513?e=2147483647&v=beta&t=Dv8_W7mbHSy1-rPtg6vWc08litiaHv7z6dFJfL2yfXA',
     },
     {
-        targy: 'It Alapok',
+        targy: 'It Alapok I.',
         tipus: 'radio',
         kerdes: 'Minek a rövidítése a CPU?',
         valaszok: [
@@ -79,7 +79,7 @@ let tesztSor = [
         kep: 'https://intec.hu/wp-content/uploads/cpu-300x245.jpg',
     },
     {
-        targy: 'It Alapok',
+        targy: 'It Alapok I.',
         tipus: 'radio',
         kerdes: 'Minek a rövidítése a GPU?',
         valaszok: [
@@ -90,5 +90,13 @@ let tesztSor = [
         ],
         joValasz: 'Graphics Processing Unit',
         kep: 'https://miro.medium.com/v2/resize:fit:1024/1*VgG01qUdBx2OMlCYIa2SRA.jpeg',
+    },
+    {
+        targy: 'It Alapok II. (hálózat)',
+        tipus: 'radio',
+        kerdes: 'A Cisco Packet Tracer egy vizuális szimulációs eszköz?',
+        valaszok: ['Igaz', 'Hamis'],
+        joValasz: 'Igaz',
+        kep: 'https://networkslearning.com/wp-content/uploads/2020/02/Screenshot-2020-02-15-at-15.54.25.png',
     },
 ];
