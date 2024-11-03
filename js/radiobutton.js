@@ -34,10 +34,15 @@ function radiobuttonQuestion(index, lista) {
     tartalom += '</div>';
 
     tartalom += '<div class="jo-valaszok">';
-    tartalom += '<h3>Helyes válasz</h3>';
+    tartalom += '<h3>Helyes válasz: </h3>';
     tartalom += '<div class="jo-valasz">';
     tartalom += `<p>${lista[index].joValasz}</p>`;
     tartalom += '</div>';
+
+    tartalom += '<hr />';
+    tartalom += '<div id="eredmeny">';
+    tartalom += '</div>';
+
     if (index < lista.length - 1) {
         tartalom += '<div class="gomb">';
         tartalom += '<button id="kovetkezo">Következő kérdés</button>';
@@ -63,6 +68,48 @@ function radiobuttonQuestion(index, lista) {
     feldolgoz.addEventListener('click', () => {
         joRValasz[0].style.display = 'block';
         feldolgoz.style.display = 'none';
+
+        let eredmeny = document.querySelector('#eredmeny');
+        let ossz = 0;
+
+        for (let i = 0; i < lista[index].valaszok.length; i++) {
+            if (document.getElementById(i).checked === true) {
+                if (lista[index].valaszok[i] === lista[index].joValasz) {
+                    ossz = 2;
+                }
+            }
+        }
+
+        let tart = '';
+        szerezheto += 2;
+        osszEredmeny += ossz;
+        let szazalek = (osszEredmeny / szerezheto) * 100;
+
+        if (ossz === 0) {
+            tart = `<h4>Eredményed: 2/0</h4>`;
+            if (szazalek < 40) {
+                tart += `<h4 class="rossz">Eddigi összeredményed: ${szerezheto}/${osszEredmeny} (${szazalek.toFixed(
+                    2
+                )}%)</h4>`;
+            } else {
+                tart += `<h4 class="jo">Eddigi összeredményed: ${szerezheto}/${osszEredmeny} (${szazalek.toFixed(
+                    2
+                )}%)</h4>`;
+            }
+        } else if (ossz === 2) {
+            tart = `<h4>Eredményed: 2/2</h4>`;
+            if (szazalek < 40) {
+                tart += `<h4 class="rossz">Eddigi összeredményed: ${szerezheto}/${osszEredmeny} (${szazalek.toFixed(
+                    2
+                )}%)</h4>`;
+            } else {
+                tart += `<h4 class="jo">Eddigi összeredményed: ${szerezheto}/${osszEredmeny} (${szazalek.toFixed(
+                    2
+                )}%)</h4>`;
+            }
+        }
+
+        eredmeny.innerHTML = tart;
     });
 
     let kovetkezo = document.querySelector('#kovetkezo');

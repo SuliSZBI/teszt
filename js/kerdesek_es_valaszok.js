@@ -54,13 +54,13 @@ let tesztSor = [
         tipus: 'check',
         kerdes: 'Mi nem igaz a HTML elemekre?',
         valaszok: [
-            'Minden elemnek van nyitó- és zárócímkéje',
+            'Minden elemnek van külön nyitó- és zárócímkéje',
             'Mindig a zárócímkében helyezzük el a /-jelet',
             'Minden elemnek van tartalma (content)',
             'a &lt;p&gt;&lt;/p&gt; és a &lt;P&gt;&lt;/P&gt; ugyanúgy paragrafust hoz létre',
         ],
         joValaszok: [
-            'Minden elemnek van kezdő- és zárócímkéje',
+            'Minden elemnek van külön nyitó- és zárócímkéje',
             'Minden elemnek van tartalma (content)',
         ],
         kep: 'https://media.licdn.com/dms/image/D4D12AQGMSvEmt00Wxw/article-cover_image-shrink_600_2000/0/1710472277513?e=2147483647&v=beta&t=Dv8_W7mbHSy1-rPtg6vWc08litiaHv7z6dFJfL2yfXA',

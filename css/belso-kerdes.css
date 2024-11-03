@@ -4,7 +4,7 @@
     flex-direction: column;
     gap: 1em;
     margin: auto;
-    padding-top: 1em;
+    padding-top: 1.8em;
     width: 70%;
 }
 
@@ -69,11 +69,35 @@ label {
     margin: 1em 0px;
 }
 
+.belso-kerdes .jo-valaszok h4 {
+    margin-bottom: 1em;
+}
+
+.belso-kerdes .jo-valaszok h4:nth-of-type(1) {
+    color: rgba(39, 174, 252, 0.719);
+}
+
+.jo {
+    color: rgba(0, 221, 0, 0.719);
+}
+
+.rossz {
+    color: rgba(252, 0, 21, 0.904);
+}
+
 .belso-kerdes p:hover {
     background-color: #1414144f;
 }
 
+.belso-kerdes #eredmeny {
+    margin-top: 1em;
+}
+
 @media screen and (max-width: 1200px) {
+    .belso-kerdes {
+        width: 90%;
+    }
+
     .belso-kerdes .valaszok {
         width: 100%;
     }

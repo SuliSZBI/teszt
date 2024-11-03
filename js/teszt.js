@@ -8,6 +8,8 @@ close.addEventListener('click', () => {
 
 for (let i = 0; i < gombok.length; i++) {
     gombok[i].addEventListener('click', () => {
+        szerezheto = 0;
+        osszEredmeny = 0;
         kerdesKontener.style.display = 'block';
         let lista = [];
 

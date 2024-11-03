@@ -12,6 +12,6 @@
 
 body {
     background-color: var(--mainHatter);
-    font-family: var(--verdana);
+    font-family: var(--roboto);
     color: var(--feher);
 }
