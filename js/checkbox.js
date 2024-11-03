@@ -13,7 +13,9 @@ function checkboxQuestion(index, lista) {
     let tartalom =
         '<span class="material-symbols-outlined" id="close">close</span>';
     tartalom += '<div class="belso-kerdes">';
-    tartalom += `<h1>${lista.length}/${index + 1}. ${lista[index].kerdes}</h1>`;
+    tartalom += `<h1>${lista.length}/${index + 1}. ${lista[index].kerdes} (${
+        lista[index].joValaszok.length
+    } jó válasz)</h1>`;
     if (lista[index].kep) {
         tartalom += '<div class="kep">';
         tartalom += `<img src="${lista[index].kep}" />`;
@@ -78,9 +80,11 @@ function checkboxQuestion(index, lista) {
 
         let eredmeny = document.querySelector('#eredmeny');
         let ossz = 0;
+        let tipp = 0;
 
         for (let i = 0; i < lista[index].valaszok.length; i++) {
             if (document.getElementById(i).checked === true) {
+                tipp++;
                 for (let j = 0; j < lista[index].joValaszok.length; j++) {
                     if (
                         lista[index].valaszok[i] === lista[index].joValaszok[j]
@@ -93,10 +97,18 @@ function checkboxQuestion(index, lista) {
 
         let tart = '';
         szerezheto += 2;
-        osszEredmeny += ossz;
+
+        if (ossz === tipp && ossz === lista[index].joValaszok.length) {
+            osszEredmeny += 2;
+        } else if (ossz === 0 || tipp === lista[index].valaszok.length) {
+            osszEredmeny += 0;
+        } else if (ossz >= 1 && tipp >= ossz) {
+            osszEredmeny += 1;
+        }
+
         let szazalek = (osszEredmeny / szerezheto) * 100;
 
-        if (ossz === 0) {
+        if (ossz === 0 || tipp === lista[index].valaszok.length) {
             tart = `<h4>Eredményed: 2/0</h4>`;
             if (szazalek < 40) {
                 tart += `<h4 class="rossz">Eddigi összeredményed: ${szerezheto}/${osszEredmeny} (${szazalek.toFixed(
@@ -107,7 +119,7 @@ function checkboxQuestion(index, lista) {
                     2
                 )}%)</h4>`;
             }
-        } else if (ossz === lista[index].joValaszok.length) {
+        } else if (ossz === tipp && ossz === lista[index].joValaszok.length) {
             tart = `<h4>Eredményed: 2/2</h4>`;
             if (szazalek < 40) {
                 tart += `<h4 class="rossz">Eddigi összeredményed: ${szerezheto}/${osszEredmeny} (${szazalek.toFixed(

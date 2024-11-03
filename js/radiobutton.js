@@ -9,7 +9,9 @@ function radiobuttonQuestion(index, lista) {
     let tartalom =
         '<span class="material-symbols-outlined" id="close">close</span>';
     tartalom += '<div class="belso-kerdes">';
-    tartalom += `<h1>${lista.length}/${index + 1}. ${lista[index].kerdes}</h1>`;
+    tartalom += `<h1>${lista.length}/${index + 1}. ${
+        lista[index].kerdes
+    } (1 jó válasz)</h1>`;
 
     if (lista[index].kep) {
         tartalom += '<div class="kep">';

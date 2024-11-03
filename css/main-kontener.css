@@ -9,6 +9,11 @@
     margin: 2em 0px;
 }
 
+.main-kontener hr {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
 .main-kontener ul {
     align-items: center;
     display: flex;
