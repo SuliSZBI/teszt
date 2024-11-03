@@ -1,0 +1,36 @@
+.main-kontener {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-kontener h1 {
+    margin: 2em 0px;
+}
+
+.main-kontener ul {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.main-kontener ul li {
+    border: 1px solid var(--feher);
+    margin-bottom: 2em;
+}
+
+.main-kontener ul li button {
+    background-color: var(--mainHatter);
+    border: none;
+    color: var(--feher);
+    font-family: var(--verdana);
+    font-size: 1.5em;
+    padding: 5px;
+}
+
+.main-kontener ul li button:hover {
+    cursor: pointer;
+    color: var(--kek);
+}

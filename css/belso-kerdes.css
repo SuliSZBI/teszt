@@ -1,0 +1,85 @@
+.belso-kerdes {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: auto;
+    padding-top: 1em;
+    width: 70%;
+}
+
+.belso-kerdes .kep {
+    margin: auto;
+    width: 50%;
+}
+
+.belso-kerdes .kep img {
+    height: 300px;
+    object-fit: contain;
+    width: 100%;
+}
+
+.belso-kerdes .valaszok {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    width: 70%;
+}
+
+.belso-kerdes .valaszok .valasz {
+    background-color: #fff3;
+    border-radius: 5px;
+    /* padding: 1em; */
+    width: 100%;
+}
+
+label {
+    display: inline-block;
+    line-height: 50px;
+    width: calc(100% - 50px);
+}
+
+.belso-kerdes .valaszok .valasz p {
+    display: flex;
+}
+
+.belso-kerdes .valaszok .valasz p input {
+    margin: 1.2em;
+}
+
+.gomb button {
+    background-color: #04aa6d;
+    border: none;
+    border-radius: 5px;
+    color: var(--feher);
+    font-size: 1.2em;
+    padding: 0.5em;
+}
+
+.gomb button:hover {
+    cursor: pointer;
+}
+
+.belso-kerdes .jo-valaszok {
+    display: none;
+}
+
+.belso-kerdes .jo-valasz {
+    display: block;
+    margin: 1em 0px;
+}
+
+.belso-kerdes p:hover {
+    background-color: #1414144f;
+}
+
+@media screen and (max-width: 1200px) {
+    .belso-kerdes .valaszok {
+        width: 100%;
+    }
+
+    .belso-kerdes .kep {
+        margin: auto;
+        width: 100%;
+    }
+}

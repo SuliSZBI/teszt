@@ -1,0 +1,17 @@
+@import './css/valtozok.css';
+@import './css/main-kontener.css';
+@import './css/kerdes-kontener.css';
+@import './css/belso-kerdes.css';
+
+* {
+    /* border: 1px solid var(--feher); */
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--mainHatter);
+    font-family: var(--verdana);
+    color: var(--feher);
+}
