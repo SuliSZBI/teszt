@@ -14,7 +14,6 @@ app.set('view engine', 'ejs');
 app.get('/', async (req, res) => {
     try {
         const kerdesek = await Question.find({});
-        console.log(kerdesek);
 
         res.status(200).render('index.ejs', { kerdesek });
     } catch (error) {
