@@ -10,8 +10,11 @@
 }
 
 .main-kontener hr {
-    width: 100%;
+    background-color: var(--piros);
+    border: none;
+    height: 2px;
     margin-bottom: 2em;
+    width: 100%;
 }
 
 .main-kontener ul {

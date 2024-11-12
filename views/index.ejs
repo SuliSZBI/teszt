@@ -17,7 +17,7 @@
         />
         <link
             rel="stylesheet"
-            href="./stilus.css"
+            href="/stilus.css"
         />
         <title>Teszt</title>
     </head>
@@ -40,10 +40,10 @@
                     <button>Python</button>
                 </li>
                 <li>
-                    <button>It Alapok I.</button>
+                    <button>IT Alapok I.</button>
                 </li>
                 <li>
-                    <button>It Alapok II. (hálózat)</button>
+                    <button>IT Alapok II. (hálózat)</button>
                 </li>
                 <hr />
                 <li>
@@ -66,9 +66,12 @@
                 </li>
             </ul>
         </div>
-        <script src="./js/checkbox.js"></script>
-        <script src="./js/radiobutton.js"></script>
-        <script src="./js/kerdesek_es_valaszok.js"></script>
-        <script src="./js/teszt.js"></script>
+        <script>
+            let tesztek = '<%- JSON.stringify(kerdesek) %>';
+        </script>
+        <script src="/js/checkbox.js"></script>
+        <script src="/js/radiobutton.js"></script>
+        <script src="/js/kerdesek_es_valaszok.js"></script>
+        <script src="/js/teszt.js"></script>
     </body>
 </html>
