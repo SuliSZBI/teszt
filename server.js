@@ -15,6 +15,23 @@ app.get('/', async (req, res) => {
     try {
         const kerdesek = await Question.find({});
 
+        for (let i = 0; i < kerdesek.length; i++) {
+            kerdesek[i].kerdes = kerdesek[i].kerdes.replace(/"/g, 'ß');
+            for (let j = 0; j < kerdesek[i].valaszok.length; j++) {
+                kerdesek[i].valaszok[j] = kerdesek[i].valaszok[j].replace(
+                    /"/g,
+                    'ß'
+                );
+            }
+
+            for (let j = 0; j < kerdesek[i].joValaszok.length; j++) {
+                kerdesek[i].joValaszok[j] = kerdesek[i].joValaszok[j].replace(
+                    /"/g,
+                    'ß'
+                );
+            }
+        }
+
         res.status(200).render('index.ejs', { kerdesek });
     } catch (error) {
         res.status(500).json({ msg: error.message });
